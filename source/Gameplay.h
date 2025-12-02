@@ -1,6 +1,7 @@
 #pragma once
 #include "Scene.h"
 #include "TestObject.h"
+#include "Ship.h"
 #include "TextObject.h"
 #include "Spawner.h"
 class Gameplay : public Scene
@@ -10,8 +11,7 @@ public:
 
 	void OnEnter() override {
 	
-		SPAWNER.SpawnObject(new TestObject());
-		SPAWNER.SpawnObject(new TestObject());
+		SPAWNER.SpawnObject(new Ship());
 		TextObject* text = new TextObject("Hola");
 		text->GetTransform()->position.x = 200;
 		text->GetTransform()->position.y = 200;
