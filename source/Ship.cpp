@@ -15,5 +15,11 @@ void Ship::Update()
 	else if (IM->GetEvent(SDLK_D, DOWN))
 		_transform->position.x += 0.05;
 
+	Shoot();
 	Object::Update();
+}
+
+void Ship::Shoot() {
+	if (IM->GetEvent(SDLK_SPACE, UP))
+		SPAWNER.SpawnObject(new Projectile(_transform->position));
 }

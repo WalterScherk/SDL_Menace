@@ -31,7 +31,7 @@ public:
 		delete physics;
 		physics = nullptr;
 	}
-	
+	void GetDestroyed() { _isPendingDestroy = true; }
 	virtual void Update()
 	{
 		if (physics != nullptr)
