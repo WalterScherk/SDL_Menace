@@ -12,8 +12,10 @@ public:
 
 	void OnEnter() override {
 	
-		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH / 2, 500)));
-		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH , 500)));
+		//BackGround* B_one = new BackGround(Vector2(RM->WINDOW_WIDTH / 2, RM->WINDOW_HEIGHT / 2));
+
+		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH / 2, RM->WINDOW_HEIGHT / 2)));
+		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH + RM->WINDOW_WIDTH/2, RM->WINDOW_HEIGHT / 2)));
 		//SPAWNER.SpawnObject(new Ship());
 		_ui.push_back(new Ship());
 		TextObject* text = new TextObject("Hola");

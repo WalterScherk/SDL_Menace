@@ -4,9 +4,9 @@ void BackGround::Update()
 {
 	_transform->position.x -= 0.05f;
 
-	if (_transform->position.x <= -500)
+	if (_transform->position.x < -1360 / 2)
 	{
-		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH+ RM->WINDOW_WIDTH/2, 500)));
+		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH + RM->WINDOW_WIDTH/2, RM->WINDOW_HEIGHT/2)));
 		GetDestroyed();
 	}
 

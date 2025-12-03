@@ -13,7 +13,7 @@ public:
 		//Vector2 randomPosition = Vector2(RM->WINDOW_WIDTH/2, RM->WINDOW_HEIGHT/2);
 		//Vector2 randomPosition = Vector2(rand() % RM->WINDOW_WIDTH, rand() % RM->WINDOW_HEIGHT);
 		_transform->position = pos;
-		_transform->scale = Vector2(14.5f, 10.5f);
+		_transform->scale = Vector2(15.5f, 10.5f);
 
 		physics->SetLinearDrag(0.1f);
 		physics->SetAngularDrag(2.f);
