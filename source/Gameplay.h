@@ -4,6 +4,7 @@
 #include "Ship.h"
 #include "TextObject.h"
 #include "Spawner.h"
+#include "BackGround.h"
 class Gameplay : public Scene
 {
 public:
@@ -11,7 +12,10 @@ public:
 
 	void OnEnter() override {
 	
-		SPAWNER.SpawnObject(new Ship());
+		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH / 2, 500)));
+		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH , 500)));
+		//SPAWNER.SpawnObject(new Ship());
+		_ui.push_back(new Ship());
 		TextObject* text = new TextObject("Hola");
 		text->GetTransform()->position.x = 200;
 		text->GetTransform()->position.y = 200;

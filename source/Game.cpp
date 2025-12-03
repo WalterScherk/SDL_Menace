@@ -21,6 +21,7 @@ void Game::Init()
 	RM->LoadTexture("resources/images/fist_1.png");
 	RM->LoadTexture("resources/xd.png");
 	RM->LoadTexture("resources/images/ship.png");
+	RM->LoadTexture("resources/images/background.png");
 	RM->LoadFont("resources/fonts/hyperspace.ttf");
 
 	//Carga de escenas

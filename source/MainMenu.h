@@ -10,10 +10,10 @@ public:
 	void OnEnter() {
 	
 		Button* button = new Button([]() { SM.SetNextScene("Gameplay"); });
-		TextObject* text = new TextObject("Play");
+		TextObject* text = new TextObject("Play");		
 		text->GetTransform()->position.x = 119;
 		text->GetTransform()->position.y = 119;
-
+		
 		_ui.push_back(button);
 		_ui.push_back(text);
 	}
