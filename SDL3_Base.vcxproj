@@ -20,13 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\AABB.cpp" />
-    <ClCompile Include="source\BackGround.cpp" />
+    <ClCompile Include="source\Projectile.cpp" />
     <ClCompile Include="source\Button.cpp" />
     <ClCompile Include="source\Game.cpp" />
     <ClCompile Include="source\GameObject.cpp" />
     <ClCompile Include="source\InputManager.cpp" />
     <ClCompile Include="source\Main.cpp" />
-    <ClCompile Include="source\Projectile.cpp" />
+    <ClCompile Include="source\BackGround.cpp" />
     <ClCompile Include="source\RenderManager.cpp" />
     <ClCompile Include="source\RigidBody.cpp" />
     <ClCompile Include="source\Ship.cpp" />

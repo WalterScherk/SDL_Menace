@@ -6,10 +6,11 @@ class MainMenu : public Scene
 {
 public:
 	MainMenu() = default;
+	Button* button;
 
 	void OnEnter() {
 	
-		Button* button = new Button([]() { SM.SetNextScene("Gameplay"); });
+		button = new Button([]() { SM.SetNextScene("Gameplay"); });
 		TextObject* text = new TextObject("Play");		
 		text->GetTransform()->position.x = 119;
 		text->GetTransform()->position.y = 119;
@@ -25,6 +26,9 @@ public:
 
 	void Update() override {
 	
+		if (IM->GetEvent(SDLK_SPACE, DOWN))
+			button->OnClicked();
+
 		Scene::Update();
 	}
 

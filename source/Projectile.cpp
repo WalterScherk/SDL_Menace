@@ -1,12 +1,11 @@
-#include "BackGround.h"
+#include "Projectile.h"
 
-void BackGround::Update()
+void Projectile::Update()
 {
-	_transform->position.x -= 0.05f;
+	_transform->position.x += 0.05;
 
-	if (_transform->position.x < -1360 / 2)
+	if (_transform->position.x > RM->WINDOW_WIDTH)
 	{
-		SPAWNER.SpawnObject(new BackGround(Vector2(RM->WINDOW_WIDTH + RM->WINDOW_WIDTH/2, RM->WINDOW_HEIGHT/2)));
 		GetDestroyed();
 	}
 
